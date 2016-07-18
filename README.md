@@ -62,10 +62,10 @@ original repo:
 Makefile that will contain a target, like this:
    ```
    update-code:
-      	@git fetch upstream master
-   	@git checkout master
-   	@git merge upstream/master
-   	@git push
+       @git fetch upstream master
+       @git checkout master
+       @git merge upstream/master
+       @git push
    ```
    Now, typing `make update-code` will get the latest updates in the
    original source code, merge them into the working repo, and push them
