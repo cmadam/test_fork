@@ -18,25 +18,21 @@ https://github.com/cmadam-1/test_fork
 ```
 git clone https://github.com/cmadam-1/test_fork.git
 ```
-
 3. Add the original project repo to the list of remote sources, under
 the name `upstream`.  The `upstream` remote will be used to retrieve
 the changes to the original project:
 ```
 git remote add upstream https://github.com/cmadam/test_fork.git
 ```
-
 4. Create the new working repository under github.ibm.com, and point
 the `origin` remote to this new repository:
 ```
 git remote set-url origin git@github.ibm.com:cmadam/test_fork.git
 ```
-
 5. Push the forked code in the new working repository:
 ```
 git push origin master
 ```
-
 6. To test that everything works, make a change (update this README.md
 file) in the original git repository.  The three steps below update
 the new working repository with the latest changes made to the
@@ -47,18 +43,15 @@ repository:
 ```
 git fetch upstream master
 ```
-
 8. Merge these changes to the master branch of the working repo: 
 ```
 git checkout master
 git merge upstream/master
 ```
-
 9. Push these changes to the remote working repo:
 ```
 git push
 ```
-
 10. Finally, in order to avoid retyping the commands above, create a
 Makefile that will contain a target, like this:
 ```
