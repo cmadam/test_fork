@@ -14,15 +14,18 @@ Follow these steps:
 1. Fork project https://github.com/cmadam/test_fork under
 https://github.com/cmadam-1/test_fork
 
-2. Clone the forked repository:```
-git clone https://github.com/cmadam-1/test_fork.git
-```
+2. Clone the forked repository:
+   ```
+   git clone https://github.com/cmadam-1/test_fork.git
+   ```
+
 3. Add the original project repo to the list of remote sources, under
 the name `upstream`.  The `upstream` remote will be used to retrieve
 the changes to the original project:
-```
-git remote add upstream https://github.com/cmadam/test_fork.git
-```
+   ```
+   git remote add upstream https://github.com/cmadam/test_fork.git
+   ```
+
 4. Create the new working repository under github.ibm.com, and point
 the `origin` remote to this new repository:
 ```
