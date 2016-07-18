@@ -14,8 +14,7 @@ Follow these steps:
 1. Fork project https://github.com/cmadam/test_fork under
 https://github.com/cmadam-1/test_fork
 
-2. Clone the forked repository:
-```
+2. Clone the forked repository:```
 git clone https://github.com/cmadam-1/test_fork.git
 ```
 3. Add the original project repo to the list of remote sources, under
