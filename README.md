@@ -28,45 +28,49 @@ the changes to the original project:
 
 4. Create the new working repository under github.ibm.com, and point
 the `origin` remote to this new repository:
-```
-git remote set-url origin git@github.ibm.com:cmadam/test_fork.git
-```
+   ```
+   git remote set-url origin git@github.ibm.com:cmadam/test_fork.git
+   ```
+
 5. Push the forked code in the new working repository:
-```
-git push origin master
-```
+   ```
+   git push origin master
+   ```
+
 6. To test that everything works, make a change (update this README.md
 file) in the original git repository.  The three steps below update
 the new working repository with the latest changes made to the
 original repo:
 
-7. Get the latest code from the master branch or the original
-repository:
-```
-git fetch upstream master
-```
-8. Merge these changes to the master branch of the working repo: 
-```
-git checkout master
-git merge upstream/master
-```
-9. Push these changes to the remote working repo:
-```
-git push
-```
+  7. Get the latest code from the master branch or the original
+     repository:
+     ```
+     git fetch upstream master
+     ```
+
+  8. Merge these changes to the master branch of the working repo:
+     ```
+     git checkout master
+     git merge upstream/master
+     ```
+
+  9. Push these changes to the remote working repo:
+     ```
+     git push
+     ```
 10. Finally, in order to avoid retyping the commands above, create a
 Makefile that will contain a target, like this:
-```
-update-code:
-	@git fetch upstream master
+   ```
+   update-code:
+      	@git fetch upstream master
 	@git checkout master
 	@git merge upstream/master
 	@git push
-```
-Now, typing `make update-code` will get the latest updates in the
-original source code, merge them into the working repo, and push them
-back into the working repo.  This will work if the merge can perform
-successfully.  TODO: handle gracefully merging conflicts.
+   ```
+   Now, typing `make update-code` will get the latest updates in the
+   original source code, merge them into the working repo, and push them
+   back into the working repo.  This will work if the merge can perform
+   successfully.  TODO: handle gracefully merging conflicts.
 
 11. Do not add the Makefile above to the git repo, as this is only a
 local convenience tool.
